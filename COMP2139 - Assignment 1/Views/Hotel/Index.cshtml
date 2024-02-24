@@ -1,0 +1,13 @@
+﻿@model HotelSearchViewModel
+
+<h2>Hotel Search</h2>
+
+<form asp-action="SearchHotels" method="post">
+    <label for="location">Location:</label>
+    <input type="text" name="location" required>
+
+    <!-- Add other input fields for check-in, check-out dates, number of guests, price range, etc. -->
+
+    <button type="submit">Search</button>
+</form>
+

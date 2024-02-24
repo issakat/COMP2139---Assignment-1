@@ -1,0 +1,32 @@
+﻿@model Hotel
+
+<h2>Add New Hotel</h2>
+
+<form asp-action="CreateHotel" method="post">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Description">Description:</label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+    <div>
+        <label asp-for="Location">Location:</label>
+        <input asp-for="Location" />
+    </div>
+    <div>
+        <label asp-for="PricePerNight">Price Per Night:</label>
+        <input asp-for="PricePerNight" />
+    </div>
+    <div>
+        <label asp-for="AvailableFrom">Available From:</label>
+        <input asp-for="AvailableFrom" type="date" />
+    </div>
+    <div>
+        <label asp-for="AvailableTo">Available To:</label>
+        <input asp-for="AvailableTo" type="date" />
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
