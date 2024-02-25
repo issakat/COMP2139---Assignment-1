@@ -11,7 +11,7 @@
         <p>Available from: @hotel.AvailableFrom.ToShortDateString() to @hotel.AvailableTo.ToShortDateString()</p>
         @foreach (var image in hotel.Images)
         {
-            <img src="@Url.Content("~/images/" + image)" alt="Hotel Image" />
+            <img src="@Url.Content("Hotel" + image)" alt="Hotel Image" />
         }
         <a href="@Url.Action("EditHotel", "Hotel", new { id = hotel.Id })">Edit</a> |
         <a href="@Url.Action("DeleteHotel", "Hotel", new { id = hotel.Id })">Delete</a>

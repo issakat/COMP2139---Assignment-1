@@ -1,0 +1,37 @@
+﻿@model List<FlightBooking>
+
+@{
+    ViewData["Title"] = "Flight Index";
+}
+
+<div class="container">
+    <h2>Available Flights</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Departure City</th>
+                <th>Arrival City</th>
+                <th>Departure Date</th>
+                <th>Arrival Date</th>
+                <th>Number of Passengers</th>
+                <th>Contact Person</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in Model)
+            {
+                <tr>
+                    <td>@flight.FlightNumber</td>
+                    <td>@flight.DepartureCity</td>
+                    <td>@flight.ArrivalCity</td>
+                    <td>@flight.DepartureDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@flight.ArrivalDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@flight.NumberOfPassengers</td>
+                    <td>@flight.ContactPerson</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

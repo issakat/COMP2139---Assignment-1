@@ -1,0 +1,38 @@
+﻿@model List<CarRentalBooking>
+
+@{
+    ViewData["Title"] = "Car Rental Index";
+}
+
+<div class="container">
+    <h2>Available Car Rentals</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Car Model</th>
+                <th>Pickup Location</th>
+                <th>Drop-Off Location</th>
+                <th>Pickup Date</th>
+                <th>Drop-Off Date</th>
+                <th>Number of Days</th>
+                <th>Contact Person</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var carRental in Model)
+            {
+                <tr>
+                    <td>@carRental.CarModel</td>
+                    <td>@carRental.PickupLocation</td>
+                    <td>@carRental.DropOffLocation</td>
+                    <td>@carRental.PickupDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@carRental.DropOffDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@carRental.NumberOfDays</td>
+                    <td>@carRental.ContactPerson</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
